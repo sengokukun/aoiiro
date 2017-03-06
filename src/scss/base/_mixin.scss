@@ -1,0 +1,38 @@
+$sp: 480;
+$pc: 481;
+$iphone5: 320;
+@mixin media($size) {
+   @if $size == $sp{
+    @media all and (max-width: $sp + 'px') {
+       @content;
+    }
+  }
+  @if $size == $pc {
+     @media all and (min-width: $pc + 'px'){
+      @content;
+    }
+  }
+  @if $size == $iphone5 {
+     @media all and (max-width: $iphone5 + 'px'){
+      @content;
+    }
+  }
+}
+
+.sp-br {
+  @include media ($sp) {
+    display: block;
+  }
+  @include media ($pc) {
+    display: none;
+  }
+}
+
+.pc-br {
+  @include media ($pc) {
+    display: block;
+  }
+  @include media ($sp) {
+    display: none;
+  }
+}
