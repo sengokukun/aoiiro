@@ -43,6 +43,7 @@
     display: flex;
     // align-items: center;
     align-items: center;
+    flex-direction: column;
 
     .header-toggle {
       border: 0;
@@ -111,6 +112,75 @@
         }
       }
     }
+
+    .layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+    }
+
+    .open {
+      position: fixed;
+    }
+
+    .master-navi {
+      position: fixed;
+      top: 0;
+      right: -240px;
+      width: 240px;
+      height: 100%;
+      background-color: #fff;
+      z-index: 2;
+
+      &__item {
+        font-size: 2rem;
+        border-bottom: 1px solid #eee;
+        // padding: 24px;
+        line-height: 80px;
+        position: relative;
+        box-sizing: border-box;
+
+        // &::after {
+        //   position: absolute;
+        //   bottom: -1px;
+        //   left: 0;
+        //   content: '';
+        //   width: 0;
+        //   height: 1px;
+        //   background-color: #fff;
+        //   transition: 0.3s;
+        // }
+
+        &:hover,
+        &:active{
+          background-color: $turquoise;
+          border-color: $turquoise;
+          // &::after {
+          //   width: 100%;
+          // }
+        }
+      }
+
+      &__link {
+        position: relative;
+        display: inline-block;
+        // padding: 24px;
+        width: 100%;
+        color: $turquoise;
+        box-sizing: border-box;
+        padding-left: 20px;
+        letter-spacing: 1px;
+        &:hover,
+        &active{
+          color: #fff;
+        }
+      }
+    }
   }
 }
 /* ====================================================
@@ -132,7 +202,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   // .contents-wrap {
   //   position: absolute;
   //   left: 50%;
@@ -144,65 +213,73 @@
   //   text-align: center;
   //   color: #fff;
   // }
+  .logo-wrap {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.logo-wrap{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__text{
-    opacity: 0;
-    height: 100px;
-    &--a{
-      -webkit-animation: textfadeIn 0.5s ease 0.5s 1 forwards;
-      animation: example 0.5s ease 0.5s 1 forwards;
-    }
-    &--b{
-      -webkit-animation: textfadeIn 0.5s ease 1s 1 forwards;
-      animation: example 0.5s ease 1s 1 forwards;
-    }
-    &--c{
-      margin: 0 11px;
-      -webkit-animation: textfadeIn 0.5s ease 1.5s 1 forwards;
-      animation: example 0.5s ease 1.5s 1 forwards;
-    }
-    &--d{
-      margin-right: 11px;
-      -webkit-animation: textfadeIn 0.5s ease 2s 1 forwards;
-      animation: example 0.5s ease 2s 1 forwards;
-    }
-    &--e{
-      -webkit-animation: textfadeIn 0.5s ease 2.5s 1 forwards;
-      animation: example 0.5s ease 2.5s 1 forwards;
-    }
-    &--f{
-      -webkit-animation: textfadeIn 0.5s ease 3s 1 forwards;
-      animation: example 0.5s ease 3s 1 forwards;
+    &__text {
+      opacity: 0;
+      height: 100px;
+
+      &--a {
+        -webkit-animation: textfadeIn 0.5s ease 0.5s 1 forwards;
+        animation: example 0.5s ease 0.5s 1 forwards;
+      }
+
+      &--b {
+        -webkit-animation: textfadeIn 0.5s ease 1s 1 forwards;
+        animation: example 0.5s ease 1s 1 forwards;
+      }
+
+      &--c {
+        margin: 0 11px;
+        -webkit-animation: textfadeIn 0.5s ease 1.5s 1 forwards;
+        animation: example 0.5s ease 1.5s 1 forwards;
+      }
+
+      &--d {
+        margin-right: 11px;
+        -webkit-animation: textfadeIn 0.5s ease 2s 1 forwards;
+        animation: example 0.5s ease 2s 1 forwards;
+      }
+
+      &--e {
+        -webkit-animation: textfadeIn 0.5s ease 2.5s 1 forwards;
+        animation: example 0.5s ease 2.5s 1 forwards;
+      }
+
+      &--f {
+        -webkit-animation: textfadeIn 0.5s ease 3s 1 forwards;
+        animation: example 0.5s ease 3s 1 forwards;
+      }
     }
   }
-}
-
   // &__logo {
   //   width: 500px;
   //   margin: 0 auto;
   //   padding-bottom: 30px;
   // }
-  .title-wrap{
+  .title-wrap {
     padding-top: 10px;
     text-align: center;
+
     &__title {
       font-size: 3.6rem;
       letter-spacing: 6px;
     }
-    &__subtitle{
+
+    &__subtitle {
       letter-spacing: 6px;
       font-size: 2rem;
-      span{
+
+      span {
         color: $aiiro;
-        font-size:4rem;
+        font-size: 4rem;
       }
     }
   }
@@ -237,7 +314,8 @@
     width: 100%;
     max-width: 1366px;
     margin: 0 auto;
-    .container{
+
+    .container {
       display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flex;
@@ -245,6 +323,7 @@
       display: flex;
       flex-wrap: wrap;
     }
+
     article {
       width: 33.3%;
       height: 300px;

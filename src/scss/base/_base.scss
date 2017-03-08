@@ -8,6 +8,9 @@ html {
   box-sizing: border-box;
   height: 100%;
   font-size: 62.5%;
+  position: relative;
+  left: 0;
+  overflow-x: hidden;
 }
 
 * {
