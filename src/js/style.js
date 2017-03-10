@@ -5,36 +5,50 @@
 //tgglemenu
 $(function(){
   var menu = $('.master-navi'),
-      triggers = $('.toggle-lines'),
-      menuBtn = $('.header-toggle'),
-      body = $(document.body),
-      // .layer もオブジェクト化
-      layer = $('.layer'),
-      menuWidth = menu.outerWidth();
+  triggers = $('.toggle-lines'),
+  menuBtn = $('.header-toggle'),
+  body = $(document.body),
+  // .layer もオブジェクト化
+  layer = $('.layer'),
+  menuWidth = menu.outerWidth();
 
-      menuBtn.on('click', function(){
-      body.toggleClass('open');
-        if(body.hasClass('open')){
-          // css で非表示にしていた .layer を表示
-          $(".layer").show();
-          body.animate({'right' : menuWidth }, 300);
-          menu.animate({'right' : 0 }, 300);
-          $(triggers).addClass('active');
-        } else {
-          // .layer を非表示
-          $(".layer").hide();
-          menu.animate({'right' : -menuWidth }, 300);
-          body.animate({'right' : 0 }, 300);
-          $(triggers).removeClass('active');
-        }
-      });
-      // .layer をクリック時にもメニューを閉じる
-      layer.on('click', function(){
-        menu.animate({'right' : -menuWidth }, 300);
-        body.animate({'right' : 0 }, 300).removeClass('open');
-        $(triggers).removeClass('active');
-        layer.hide();
-      });
+  menuBtn.on('click', function(){
+  body.toggleClass('open');
+    if(body.hasClass('open')){
+      // css で非表示にしていた .layer を表示
+      $(".layer").show();
+      body.animate({'right' : menuWidth }, 300);
+      menu.animate({'right' : 0 }, 300);
+      $(triggers).addClass('active');
+    } else {
+      // .layer を非表示
+      $(".layer").hide();
+      menu.animate({'right' : -menuWidth }, 300);
+      body.animate({'right' : 0 }, 300);
+      $(triggers).removeClass('active');
+    }
+  });
+  // .layer をクリック時にもメニューを閉じる
+  layer.on('click', function(){
+    menu.animate({'right' : -menuWidth }, 300);
+    body.animate({'right' : 0 }, 300).removeClass('open');
+    $(triggers).removeClass('active');
+    layer.hide();
+  });
+
+  var windowW = $(window).width();//画面の横幅を取得
+
+   if( windowW > 481 ){//画面の横幅が480px以下なら
+     var array = [
+       "../img/bg.png",
+       "../img/bg02.png",
+       "../img/bg_hero.png"
+     ];
+     var l = array.length;
+     var r = Math.floor(Math.random()*l);
+     var bgimgurl = array[r];
+     $(".hero").css('background-image',('url("'+bgimgurl+'")'));
+   }
 });
 
 //TweenMax

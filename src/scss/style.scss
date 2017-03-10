@@ -5,10 +5,9 @@
 ==================================================== */
 .hero {
   margin-top: -70px;
-  background-color: #eee;
+  // background-color: #eee;
   height: 100vh;
   position: relative;
-  // background-image: url(../img/bg.png);
   // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(../img/top.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,6 +19,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include media ($sp) {
+    height: 70vh;
+  }
 
   .logo-wrap {
     display: -webkit-flex;
@@ -33,6 +35,9 @@
     &__text {
       opacity: 0;
       height: 100px;
+      @include media ($sp) {
+        height: 50px;
+      }
 
       &--a {
         -webkit-animation: textfadeIn 0.5s ease 0.5s 1 forwards;
@@ -80,17 +85,26 @@
       font-size: 3.6rem;
       letter-spacing: 6px;
       font-weight: 400;
+      @include media ($sp) {
+        font-size: 2.6rem;
+      }
     }
 
     &__subtitle {
       letter-spacing: 6px;
       font-size: 2rem;
       font-weight: 400;
+      @include media ($sp) {
+        font-size: 1.6rem;
+      }
 
       span {
         color: $aiiro;
         font-size: 4rem;
         font-weight: bold;
+        @include media ($sp) {
+          font-size: 2.6rem;
+        }
       }
     }
   }
@@ -100,8 +114,10 @@
 // main
 ==================================================== */
 .main {
-  padding-top: 50px;
+  // padding-top: 50px;
+  @include media ($sp) {
 
+  }
   /* ====================================================
   // photo-contents
   ==================================================== */
@@ -110,7 +126,8 @@
       text-align: center;
       font-size: 3rem;
       letter-spacing: 2px;
-      color: $turquoise;
+      color: $aiiro;
+      padding-top: 40px;
       padding-bottom: 20px;
       font-weight: normal;
 
@@ -121,7 +138,7 @@
         width: 80%;
         height: 1px;
         margin: 10px auto;
-        background-color: $turquoise;
+        background-color: $aiiro;
         vertical-align: middle;
         width: 120px;
         margin: 0 30px;
