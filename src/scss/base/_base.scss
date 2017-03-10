@@ -191,9 +191,6 @@ li {
       cursor: pointer;
       appearance: none;
       background: transparent;
-      @include media ($sp) {
-        // padding-top: 23px;
-      }
 
       .toggle-lines {
         display: inline-block;

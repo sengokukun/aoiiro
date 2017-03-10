@@ -67,7 +67,7 @@ gulp.task('imagemin', function() {
 
 // html圧縮
 gulp.task('htmlmin', function() {
-  return gulp.src('src/*.html')
+  return gulp.src('src/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./dist/'));
 });
