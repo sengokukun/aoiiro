@@ -66,3 +66,13 @@ $aiiro: #105889;
     opacity: 1;
   }
 }
+
+@-webkit-keyframes bgscroll {
+ 0% {background-position: 0 0;}
+ 100% {background-position: 0 -500px;}
+}
+
+@keyframes bgscroll {
+ 0% {background-position: 0 0;}
+ 100% {background-position: 0 -500px;}
+}

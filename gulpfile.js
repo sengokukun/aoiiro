@@ -49,14 +49,14 @@ gulp.task('cmq', function () {
 
 // js圧縮
 gulp.task("uglify", function() {
-  gulp.src(["./src/js/**/*.js","!./js/min/**/*.js"])
+  gulp.src(["./src/js/**/*.js","!./src/js/min/**/*.js","./src/js/ie8/**/*.js"])
   .pipe(uglify())
   .pipe(gulp.dest("./dist/js"));
 });
 
 // img圧縮
 gulp.task('imagemin', function() {
-  return gulp.src('src/img/*.{png,jpg,svg,webp}')
+  return gulp.src('src/img/*.{png,jpg,svg,webp,ico}')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
