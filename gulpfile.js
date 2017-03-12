@@ -75,7 +75,7 @@ gulp.task('htmlmin', function() {
 // default
 gulp.task("default", ["server"], function() {
   gulp.watch(['./src/scss/**/*.scss'], ["sass"]);
-  gulp.watch(["./src/js/**/*.js", "!js/min/**/*.js"], ["uglify"]);
+  gulp.watch(["./src/js/**/*.js", "!./src/js/min/**/*.js"], ["uglify"]);
   gulp.watch('./dist/css/**/*css',['cmq']);
   gulp.watch('./src/*.html', ['htmlmin']);
   gulp.watch('./src/img/*',['imagemin']);

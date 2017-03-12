@@ -36,6 +36,7 @@ $(function(){
     layer.hide();
   });
 
+  //画像ランダム表示
   var windowW = $(window).width();//画面の横幅を取得
 
    if( windowW > 481 ){//画面の横幅が480px以下なら

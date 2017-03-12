@@ -77,3 +77,29 @@ $main-bg: #f5f0eb;
  0% {background-position: 0 0;}
  100% {background-position: 0 -500px;}
 }
+
+$time : .5s;
+$ease : cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+#pjaxContent{
+    position: relative;
+
+    &.fadeIn{
+        animation: fadeIn $time $ease;
+    }
+    &.fadeOut{
+        animation: fadeOut $time $ease;
+    }
+    &.fadeOutDelay{
+        animation: fadeOut $time .4s $ease;
+    }
+}
+
+@keyframes fadeIn{
+    0%{left: 100%;}
+    100%{left: 0;}
+}
+@keyframes fadeOut{
+    0%{left: 0;}
+    100%{left: -100%;}
+}

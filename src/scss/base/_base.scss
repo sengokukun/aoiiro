@@ -309,8 +309,9 @@ li {
 // footer
 ==================================================== */
 .footer {
+  height: 60px;
   &__copyright {
-    padding: 20px;
+    line-height: 60px;
     text-align: center;
   }
 }
