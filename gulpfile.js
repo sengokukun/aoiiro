@@ -31,12 +31,12 @@ gulp.task("sass", ['server'], function() {
   gulp.src('./src/scss/**/*.scss')
     .pipe(plumber())
     .pipe(sass({
-        outputStyle: 'compressed'
+      outputStyle: 'compressed'
     }))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./dist/css'))
     .pipe(browser.reload({
-        stream: true
+      stream: true
   }));
 });
 
@@ -51,7 +51,10 @@ gulp.task('cmq', function () {
 gulp.task("uglify", function() {
   gulp.src(["./src/js/**/*.js","!./src/js/min/**/*.js","./src/js/ie8/**/*.js"])
   .pipe(uglify())
-  .pipe(gulp.dest("./dist/js"));
+  .pipe(gulp.dest("./dist/js"))
+  .pipe(browser.reload({
+    stream: true
+  }));
 });
 
 // img圧縮
@@ -68,14 +71,17 @@ gulp.task('imagemin', function() {
 // html圧縮
 gulp.task('htmlmin', function() {
   return gulp.src('src/**/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./dist/'));
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(gulp.dest('./dist/'))
+  .pipe(browser.reload({
+    stream: true
+  }));
 });
 
 // default
 gulp.task("default", ["server"], function() {
-  gulp.watch(['./src/scss/**/*.scss'], ["sass"]);
-  gulp.watch(["./src/js/**/*.js", "!./src/js/min/**/*.js"], ["uglify"]);
+  gulp.watch(['./src/scss/**/*.scss'], ['sass']);
+  gulp.watch(['./src/js/**/*.js', '!./src/js/min/**/*.js'], ['uglify']);
   gulp.watch('./dist/css/**/*css',['cmq']);
   gulp.watch('./src/*.html', ['htmlmin']);
   gulp.watch('./src/img/*',['imagemin']);

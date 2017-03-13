@@ -57,19 +57,24 @@
         </ul>
       </div>
     </header>
-    <div class="bg-main">
-      <section class="about">
-        <div class="container">
-          <h1 class="about__title">1にち1あお</h1>
-          <p class="about__desc">をテーマに、1日に1個だけ「何か」を青に変化させて公開しています。
-            <br>普段何気なく目にするであろう「青色」を他の色の物に変えると、
-            <br>違和感を覚えたり新たな発見があると思います。
-            <br>様々な視点で「青色」を表現し、色の大切さや青の大切さを再確認できるよう目指して活動しています。
-          </p>
+    <div class="bg-mains">
+      <section class="paint">
+        <h1 class="title-top">ご自由に「あお」でお書きください。</h1>
+        <ul id="color-box">
+          <li class="turquoise"></li>
+          <li class="aiiro"></li>
+          <li class="darkturquoise"></li>
+          <li class="blue"></li>
+        </ul>
+        <canvas class="paint-canvas" width="1366" height="500"></canvas>
+        <div class="paint-buttons">
+          <button class="button button--clear button--s">Clear</button>
+          <button class="button button--getimage button--s">Get image</button>
         </div>
       </section>
-
     </div>
+    <!--img(class="preview flt-left",src="test",width=800,height=300)-->
+
     <footer class="footer">
       <p class="footer__copyright"><small>Copyright &copy; 2017 aoiiro.All Rights Reserved.</small></p>
     </footer>
@@ -77,6 +82,7 @@
 
   <script type="text/javascript" src="/js/instagram.js"></script>
   <script type="text/javascript" src="/js/style.js"></script>
+  <script type="text/javascript" src="/js/paint.js"></script>
 </body>
 
 </html>

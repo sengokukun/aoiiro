@@ -1,34 +1,29 @@
-
-
 //jquery
 
 //tgglemenu
 $(function(){
   var menu = $('.master-navi'),
   triggers = $('.toggle-lines'),
-  menuBtn = $('.header-toggle'),
+  toggleBtn = $('.header-toggle'),
   body = $(document.body),
-  // .layer もオブジェクト化
   layer = $('.layer'),
   menuWidth = menu.outerWidth();
 
-  menuBtn.on('click', function(){
+  toggleBtn.on('click', function(){
   body.toggleClass('open');
     if(body.hasClass('open')){
-      // css で非表示にしていた .layer を表示
       $(".layer").show();
       body.animate({'right' : menuWidth }, 300);
       menu.animate({'right' : 0 }, 300);
       $(triggers).addClass('active');
     } else {
-      // .layer を非表示
       $(".layer").hide();
       menu.animate({'right' : -menuWidth }, 300);
       body.animate({'right' : 0 }, 300);
       $(triggers).removeClass('active');
     }
   });
-  // .layer をクリック時にもメニューを閉じる
+  // .layer クリックしてメニューを閉じる
   layer.on('click', function(){
     menu.animate({'right' : -menuWidth }, 300);
     body.animate({'right' : 0 }, 300).removeClass('open');
