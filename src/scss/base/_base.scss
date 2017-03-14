@@ -164,7 +164,7 @@ li {
     margin-right: 10px;
   }
   &--instagram {
-    margin: 40px auto;
+    margin: 60px auto;
     position: relative;
     z-index: 2;
     background-color: inherit;
@@ -249,6 +249,9 @@ li {
           height: 2px;
           background-color: #fff;
           border-radius: 2px;
+          @include media ($sp) {
+            background-color: $turquoise;
+          }
 
           &:nth-of-type(1) {
             top: 0;
@@ -362,9 +365,7 @@ li {
     .fb-page{
       width: 400px;
       @include media($sp) {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
+        margin-bottom: 30px;
         iframe{
           width: 100%;
         }
