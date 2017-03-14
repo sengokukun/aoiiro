@@ -84,12 +84,8 @@ li {
 // wrap
 ==================================================== */
 .wrap{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: column;
+  @include flex();
+  @include fd(column);
 	min-height: 100vh;
 }
 
@@ -134,8 +130,6 @@ li {
   text-align: center;
   text-decoration: none;
   outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -150,8 +144,6 @@ li {
     z-index: -1;
     display: block;
     content: '';
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -200,11 +192,7 @@ li {
 // header
 ==================================================== */
 .header {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
+  @include flex();
   justify-content: space-between;
   height: 70px;
   width: 100%;
@@ -224,14 +212,9 @@ li {
   // header-navi
   ==================================================== */
   &__navi {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    // align-items: center;
+    @include flex();
     align-items: center;
-    flex-direction: column;
+    @include fd(column);
 
     .header-toggle {
       border: 0;
@@ -361,19 +344,20 @@ li {
 /*===========================================
 	sns設定
 =============================================*/
-.sns{
-  background-color: $aiiro;
-  @include media($sp) {
+.sns-timeline{
+  background-color: $incblue;
 
-  };
   .section-wrap{
     width: 100%;
+    padding: 60px 0;
+    box-sizing: border-box;
     @include flex();
     align-items: center;
     justify-content: center;
     @include media($sp) {
-      margin: 0 auto;
-      text-align: center;
+      @include fd(column);
+      padding-left: 20px;
+      padding-right: 20px;
     };
     .fb-page{
       width: 400px;
@@ -388,10 +372,8 @@ li {
     }
     .twitter{
       width: 400px;
-      padding: 60px 0;
       margin-left: 60px;
       @include media($sp) {
-        padding-top: 0;
         width: 100%;
         margin: 0 auto;
       };
