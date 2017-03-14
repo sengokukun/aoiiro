@@ -12,22 +12,8 @@ $colors: ( "turquoise": #0086a2, "aiiro": #105889, "darkturquoise": #00A5BF, "bl
   // display: block;
   //transform: translate(-50%, -50%);
   width: 100%;
-  max-width: $base_maxwidth;
+  max-width: 1366px;
   margin: 0 auto;
-  .paint-top{
-    @include flex();
-    align-items: center;
-    justify-content: space-between;
-  }
-  &__title{
-    font-size: 1.8rem;
-    font-weight: normal;
-    span{
-      font-size: 2rem;
-      color: $aiiro;
-      font-weight: bold;
-    }
-  }
 }
 
 .paint-canvas {
@@ -36,16 +22,18 @@ $colors: ( "turquoise": #0086a2, "aiiro": #105889, "darkturquoise": #00A5BF, "bl
   border: 4px solid $aiiro;
   border-radius: 4px;
   cursor: crosshair;
-  margin: 0 auto;
 }
 
 #color-box {
   list-style: none;
   margin: 0;
-  @include flex();
-  justify-content: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end;
   padding-bottom: 10px;
-  align-self: center;
 
   li {
     position: relative;
@@ -54,20 +42,23 @@ $colors: ( "turquoise": #0086a2, "aiiro": #105889, "darkturquoise": #00A5BF, "bl
     margin-left: 1%;
     display: block;
     cursor: pointer;
-    margin-right: 10px;
-
-    &:last-child{
-      margin-right: 0;
-    }
 
     &:hover {
       transform: scale(1.2,1.2);
+    }
+
+    &:first-child {
+      margin-left: 4px;
     }
   }
 }
 
 .paint-buttons {
-  @include flex();
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
   align-items: center;
   margin-top: 10px;
 
@@ -75,26 +66,15 @@ $colors: ( "turquoise": #0086a2, "aiiro": #105889, "darkturquoise": #00A5BF, "bl
     color: #fff;
     background-color: $turquoise;
     font-size: 1.4rem;
-
-    &:hover {
-      background: #666;
-      color: white;
-    }
-    &--getimage{
-      @include media ($sp) {
-        display: none;
+      &:hover {
+        background: #666;
+        color: white;
       }
-    }
   }
 }
 
 #preview {
+  margin-left: 20px;
   border: 4px solid #999;
   border-radius: 4px;
-}
-
-.image-info{
-  align-self: flex-end;
-  font-size: 1rem;
-  padding-left: 5px;
 }

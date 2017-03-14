@@ -6,13 +6,11 @@
   <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1,maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="1にち1あお。をテーマに、1日に1個だけ「何か」を青に変化させてSNS上で公開しています。">
   <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
   <script type="text/javascript" src="/js/min/TweenMax.min.js"></script>
   <!--[if lt IE 9]>
   <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
@@ -24,7 +22,7 @@
 </head>
 
 <body>
-  <div class="wrap bg">
+  <div class="wrap">
     <header class="header">
       <h1 class="header__logo"><a href="./index.html" class="header__logo--link"><img src="/img/oaiiro.svg" alt="aoiiro"></a></h1>
       <div class="header__navi">
@@ -45,10 +43,13 @@
             <a class="master-navi__link" href="./about.html">ABOUT</a>
           </li>
           <li class="master-navi__item">
-            <a class="master-navi__link" href="https://twitter.com/aoiiro_ao" target="_self">TWITTER</a>
+            <a class="master-navi__link" href="./paint.html">PAINT</a>
           </li>
           <li class="master-navi__item">
-            <a class="master-navi__link" href="https://www.instagram.com/aoiiro_ao/" target="_self">INSTAGRAM</a>
+            <a class="master-navi__link" href="https://twitter.com/aoiiro_ao" target="_blank">TWITTER</a>
+          </li>
+          <li class="master-navi__item">
+            <a class="master-navi__link" href="https://www.instagram.com/aoiiro_ao/" target="_blank">INSTAGRAM</a>
           </li>
           <li class="master-navi__item">
             <a class="master-navi__link" href="#" target="_blank">FACEBOOK</a>
@@ -56,24 +57,19 @@
         </ul>
       </div>
     </header>
-
+    <div class="bg-main">
       <section class="about">
         <div class="container">
           <h1 class="about__title">1にち1あお</h1>
           <p class="about__desc">をテーマに、1日に1個だけ「何か」を青に変化させて公開しています。
-            <br class="pc-br">普段何気なく目にするであろう「青色」を他の色の物に変えると、
+            <br>普段何気なく目にするであろう「青色」を他の色の物に変えると、
             <br>違和感を覚えたり新たな発見があると思います。
             <br>様々な視点で「青色」を表現し、色の大切さや青の大切さを再確認できるよう目指して活動しています。
           </p>
-          <div id="before-after">
-          	<div class="view view--after"></div>
-          	<div class="view view--before"></div>
-          	<div class="dragme"></div>
-          </div>
         </div>
       </section>
 
-
+    </div>
     <footer class="footer">
       <p class="footer__copyright"><small>Copyright &copy; 2017 aoiiro.All Rights Reserved.</small></p>
     </footer>

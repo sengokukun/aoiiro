@@ -123,7 +123,7 @@ $(document).ready(function(){
       .on(touch_mouse.up, mouseleave)
       .on(touch_mouse.leave, mouseleave);
 
-    $('.button--clear').on('click', function(){
+    $('button.button--clear').on('click', function(){
       clear_canvas(true);
     });
     $('#color-box').on('click','li',function(){
@@ -135,12 +135,12 @@ $(document).ready(function(){
       if ( $('#preview').length ) {
         $img = $('#preview');
       } else {
-        $img = $(new Image()).insertAfter('.bg .paint');
+        $img = $(new Image()).insertAfter('.paint');
       }
 
       $img
         .hide()
-        .addClass('paint')
+        .addClass('paint-wrap')
         .attr('id','preview')
         .attr('src',$canvas[0].toDataURL())
         .on('load', function() {

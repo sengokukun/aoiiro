@@ -1,33 +1,30 @@
-/* ====================================================
-// color変数
-==================================================== */
+$sp: 480;
+$pc: 481;
+$iphone5: 320;
+$bigpc: 1000;
+@mixin media($size) {
+   @if $size == $sp{
+    @media all and (max-width: $sp + 'px') {
+       @content;
+    }
+  }
+  @if $size == $pc {
+     @media all and (min-width: $pc + 'px'){
+      @content;
+    }
+  }
+  @if $size == $iphone5 {
+     @media all and (max-width: $iphone5 + 'px'){
+      @content;
+    }
+  }
+  @if $size == $bigpc {
+     @media all and (min-width: $bigpc + 'px'){
+      @content;
+    }
+  }
+}
 
-$turquoise: #0086a2;
-$darkturquoise: #00A5BF;
-$aiiro: #105889;
-$blue: #00a5bf;
-$main-bg: #f5f0eb;
-
-/* ====================================================
-// ページ全体の横幅
-==================================================== */
-$base_width: 960px;
-$base_maxwidth: 1366px;
-
-/* ====================================================
-// 余白設定
-==================================================== */
-$base_p: 0 20px;
-
-/* ====================================================
-// font設定
-==================================================== */
-$base_font: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-
-
-/* ====================================================
-// br設定
-==================================================== */
 .sp-br {
   @include media ($sp) {
     display: block;
@@ -47,17 +44,28 @@ $base_font: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kak
 }
 
 /* ====================================================
+// color変数
+==================================================== */
+
+$turquoise: #0086a2;
+$darkturquoise: #00A5BF;
+$aiiro: #105889;
+$blue: #00a5bf;
+$main-bg: #f5f0eb;
+
+
+/* ====================================================
 // keyframe
 ==================================================== */
 
 @-webkit-keyframes example {
   100% {
-    @include opacity(1);
+    opacity: 1;
   }
 }
 @keyframes textfadeIn {
   100% {
-    @include opacity(1);
+    opacity: 1;
   }
 }
 
