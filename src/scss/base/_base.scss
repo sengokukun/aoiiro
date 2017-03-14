@@ -20,6 +20,7 @@ html {
 
 body {
   background-color: $main-bg;
+  font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   overflow-x: hidden;
@@ -27,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  font-family: $base_font;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -78,41 +79,45 @@ ul {
 li {
   list-style-type: none;
 }
+
 /* ====================================================
 // wrap
 ==================================================== */
-.wrap {
-  @include flex();
-  @include fd(column);
-  min-height: 100vh;
+.wrap{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+	min-height: 100vh;
 }
+
 /* ====================================================
 // contents-wrap
 ==================================================== */
-// .bg-main {
+// .bg-main{
 //   height: 100vh;
 //   width: 100%;
 //   margin-top: -70px;
 //   margin-bottom: -60px;
-//   background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../../img/bg.png");
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   @include flex();
+//
+//   display: -webkit-flex;
+//   display: -moz-flex;
+//   display: -ms-flex;
+//   display: -o-flex;
+//   display: flex;
 //   align-items: center;
 //   justify-content: center;
-//   @include fd(column);
-//   @include media ($sp) {
-//     background-image: none;
-//     background-color: $main-bg;
-//   }
 // }
+
 .bg{
-  background-image: url("../../img/bg.png");
+  background-image: url(../../img/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 /* ====================================================
 // container
 ==================================================== */
@@ -129,6 +134,8 @@ li {
   text-align: center;
   text-decoration: none;
   outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -143,28 +150,27 @@ li {
     z-index: -1;
     display: block;
     content: '';
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
 
-  &--m {
+  &--m{
     width: 300px;
     height: 60px;
     line-height: 60px;
   }
-
-  &--s {
+  &--s{
     width: 100px;
     height: 40px;
     line-height: 40px;
     border: none;
   }
-
   &--clear {
     margin-right: 10px;
   }
-
   &--instagram {
     margin: 40px auto;
     position: relative;
@@ -174,7 +180,6 @@ li {
     color: $turquoise;
     overflow: hidden;
     font-size: 1.6rem;
-
     &:hover {
       color: #fff;
 
@@ -195,16 +200,20 @@ li {
 // header
 ==================================================== */
 .header {
-  @include flex();
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
   justify-content: space-between;
   height: 70px;
   width: 100%;
   position: relative;
   // background-color: #fff;
   z-index: 999;
-  // @include media ($sp) {
-  //   height: 70px;
-  // }
+  @include media ($sp) {
+    height: 70px;
+  }
 
   &__logo {
     width: 100px;
@@ -215,9 +224,14 @@ li {
   // header-navi
   ==================================================== */
   &__navi {
-    @include flex();
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    // align-items: center;
     align-items: center;
-    @include fd(column);
+    flex-direction: column;
 
     .header-toggle {
       border: 0;
@@ -252,9 +266,6 @@ li {
           height: 2px;
           background-color: #fff;
           border-radius: 2px;
-          @include media ($sp) {
-            background-color: $turquoise;
-          }
 
           &:nth-of-type(1) {
             top: 0;
@@ -277,7 +288,7 @@ li {
         }
 
         span:nth-of-type(2) {
-          @include opacity(0);
+          opacity: 0;
         }
 
         span:nth-of-type(3) {
@@ -347,21 +358,52 @@ li {
     }
   }
 }
+/*===========================================
+	sns設定
+=============================================*/
+.sns{
+  background-color: $aiiro;
+  @include media($sp) {
+
+  };
+  .section-wrap{
+    width: 100%;
+    @include flex();
+    align-items: center;
+    justify-content: center;
+    @include media($sp) {
+      margin: 0 auto;
+      text-align: center;
+    };
+    .fb-page{
+      width: 400px;
+      @include media($sp) {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        iframe{
+          width: 100%;
+        }
+      };
+    }
+    .twitter{
+      width: 400px;
+      padding: 60px 0;
+      margin-left: 60px;
+      @include media($sp) {
+        padding-top: 0;
+        width: 100%;
+        margin: 0 auto;
+      };
+    }
+  }
+}
 /* ====================================================
 // footer
 ==================================================== */
 .footer {
   margin-top: auto;
   height: 60px;
-
-  &__sns{
-    @include flex();
-    justify-content: center;
-    .twitter-share-button{
-      margin-right: 10px;
-    }
-  }
-
   &__copyright {
     line-height: 60px;
     text-align: center;
