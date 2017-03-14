@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1,maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="1にち1あお。をテーマに、1日に1個だけ「何か」を青に変化させてSNS上で公開しています。">
   <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -22,7 +23,7 @@
 </head>
 
 <body>
-  <div class="wrap">
+  <div class="wrap bg">
     <header class="header">
       <h1 class="header__logo"><a href="./index.html" class="header__logo--link"><img src="/img/oaiiro.svg" alt="aoiiro"></a></h1>
       <div class="header__navi">
@@ -43,9 +44,6 @@
             <a class="master-navi__link" href="./about.html">ABOUT</a>
           </li>
           <li class="master-navi__item">
-            <a class="master-navi__link" href="./paint.html">PAINT</a>
-          </li>
-          <li class="master-navi__item">
             <a class="master-navi__link" href="https://twitter.com/aoiiro_ao" target="_blank">TWITTER</a>
           </li>
           <li class="master-navi__item">
@@ -57,22 +55,25 @@
         </ul>
       </div>
     </header>
-    <div class="bg-mains">
-      <section class="paint">
-        <h1 class="title-top">ご自由に「あお」でお書きください。</h1>
+
+    <div class="paint">
+      <div class="paint-top">
+        <h1 class="paint__title">ご自由に<span>「あお」</span>でお書きください。</h1>
         <ul id="color-box">
           <li class="turquoise"></li>
           <li class="aiiro"></li>
           <li class="darkturquoise"></li>
           <li class="blue"></li>
         </ul>
-        <canvas class="paint-canvas" width="1366" height="500"></canvas>
-        <div class="paint-buttons">
-          <button class="button button--clear button--s">Clear</button>
-          <button class="button button--getimage button--s">Get image</button>
-        </div>
-      </section>
+      </div>
+      <canvas class="paint-canvas" width="1366" height="500"></canvas>
+      <div class="paint-buttons">
+        <button class="button button--clear button--s">Clear</button>
+        <button class="button button--getimage button--s">Get image</button>
+        <p class="image-info">&lowast;クリック後画像が下に表示されますので、<br>「名前をつけて保存」等でご対応下さいませ。</p>
+      </div>
     </div>
+
     <!--img(class="preview flt-left",src="test",width=800,height=300)-->
 
     <footer class="footer">
