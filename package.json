@@ -1,7 +1,6 @@
 {
   "name": "aoiiro",
   "version": "1.0.0",
-  "description": "## _reset.scss htmlに元々効いているデフォルトのスタイルを解除するCSS。 html5doctorを元にしていて、以下の部分を追加してある。 複数人数で作業する場合があるので、一番クセのない形にしてある。 ほとんどのデフォルトのスタイルは切ってある。",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

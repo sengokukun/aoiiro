@@ -4,9 +4,16 @@
   &__title {
     text-align: left;
     font-weight: normal;
-    font-size: 4rem;
+    font-size: 4.2rem;
+    color: $incblue;
+    span{
+      font-size: 3.2rem;
+    }
     @include media ($sp) {
-      font-size: 2.6rem;
+      font-size: 3rem;
+      span{
+        font-size: 2.2rem;
+      }
     }
   }
 

@@ -87,6 +87,7 @@ li {
   @include flex();
   @include fd(column);
 	min-height: 100vh;
+  background-color: $main-bg;
 }
 
 /* ====================================================
@@ -112,6 +113,10 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  @include media($sp) {
+    background-image: none;
+    background-color: $main-bg;
+  }
 }
 
 /* ====================================================
@@ -348,9 +353,10 @@ li {
 	sns設定
 =============================================*/
 .sns-timeline{
-  background-color: $incblue;
-
+  padding: 0 10px;
   .section-wrap{
+    border-radius: 10px;
+    background-color: $incblue;
     width: 100%;
     padding: 60px 0;
     box-sizing: border-box;
@@ -373,6 +379,8 @@ li {
     }
     .twitter{
       width: 400px;
+      // height: 400px;
+      // overflow: scroll;
       margin-left: 60px;
       @include media($sp) {
         width: 100%;
@@ -390,5 +398,6 @@ li {
   &__copyright {
     line-height: 60px;
     text-align: center;
+    color: $incblue;
   }
 }

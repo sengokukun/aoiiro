@@ -93,7 +93,7 @@
       }
 
       span {
-        color: $aiiro;
+        color: $incblue;
         font-size: 4rem;
         font-weight: bold;
         @include media ($sp) {
@@ -109,6 +109,7 @@
 ==================================================== */
 .top-main {
   // padding-top: 50px;
+  padding: 0 10px;
   @include media ($sp) {
 
   }
@@ -116,6 +117,10 @@
   // photo-contents
   ==================================================== */
   .photo-contents {
+    background-color: #fff;
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
     &__title {
       text-align: center;
       font-size: 3rem;
@@ -150,7 +155,6 @@
     max-width: none;
     margin: 2px auto;
     width: 100%;
-    max-width: 1366px;
     margin: 0 auto;
 
     .container {

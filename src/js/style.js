@@ -35,9 +35,8 @@ $(function(){
 
    if( windowW > 481 ){
      var array = [
-       "../img/bg.png",
-       "../img/bg02.png",
-       "../img/bg_hero.png"
+       "../img/bg_form.svg"
+      //  "../img/bg02.png"
      ];
      var l = array.length;
      var r = Math.floor(Math.random()*l);
