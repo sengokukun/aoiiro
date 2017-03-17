@@ -79,17 +79,16 @@ ul {
 li {
   list-style-type: none;
 }
-
 /* ====================================================
 // wrap
 ==================================================== */
-.wrap{
+.wrap {
   @include flex();
   @include fd(column);
-	min-height: 100vh;
-  background-color: $main-bg;
+  min-height: 100vh;
+  background-image: url("../../img/bg.png");
+  position: relative;
 }
-
 /* ====================================================
 // contents-wrap
 ==================================================== */
@@ -108,8 +107,8 @@ li {
 //   justify-content: center;
 // }
 
-.bg{
-  background-image: url(../../img/bg.png);
+.bg {
+  background-image: url("../../img/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -118,7 +117,6 @@ li {
     background-color: $main-bg;
   }
 }
-
 /* ====================================================
 // container
 ==================================================== */
@@ -154,20 +152,23 @@ li {
     transition: all 0.3s;
   }
 
-  &--m{
+  &--m {
     width: 300px;
     height: 60px;
     line-height: 60px;
   }
-  &--s{
+
+  &--s {
     width: 100px;
     height: 40px;
     line-height: 40px;
     border: none;
   }
+
   &--clear {
     margin-right: 10px;
   }
+
   &--instagram {
     margin: 60px auto;
     position: relative;
@@ -177,6 +178,7 @@ li {
     color: $turquoise;
     overflow: hidden;
     font-size: 1.6rem;
+
     &:hover {
       color: #fff;
 
@@ -252,11 +254,8 @@ li {
           left: 0;
           width: 100%;
           height: 2px;
-          background-color: #fff;
+          background-color: $turquoise;
           border-radius: 2px;
-          @include media ($sp) {
-            background-color: $turquoise;
-          }
 
           &:nth-of-type(1) {
             top: 0;
@@ -349,52 +348,13 @@ li {
     }
   }
 }
-/*===========================================
-	sns設定
-=============================================*/
-.sns-timeline{
-  padding: 0 10px;
-  .section-wrap{
-    border-radius: 10px;
-    background-color: $incblue;
-    width: 100%;
-    padding: 60px 0;
-    box-sizing: border-box;
-    @include flex();
-    align-items: center;
-    justify-content: center;
-    @include media($sp) {
-      @include fd(column);
-      padding-left: 20px;
-      padding-right: 20px;
-    };
-    .fb-page{
-      width: 400px;
-      @include media($sp) {
-        margin-bottom: 30px;
-        iframe{
-          width: 100%;
-        }
-      };
-    }
-    .twitter{
-      width: 400px;
-      // height: 400px;
-      // overflow: scroll;
-      margin-left: 60px;
-      @include media($sp) {
-        width: 100%;
-        margin: 0 auto;
-      };
-    }
-  }
-}
 /* ====================================================
 // footer
 ==================================================== */
 .footer {
   margin-top: auto;
   height: 60px;
+
   &__copyright {
     line-height: 60px;
     text-align: center;
