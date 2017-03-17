@@ -1,14 +1,28 @@
 /* ====================================================
 // hero
 ==================================================== */
+
+canvas {
+  cursor: crosshair;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .hero {
   margin-top: -70px;
   height: 100vh;
+  width: 100%;
   position: relative;
   // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(../img/top.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  // z-index: 4;
   @include flex();
   justify-content: center;
   align-items: center;
@@ -18,6 +32,8 @@
   }
 
   .logo-wrap {
+    position: relative;
+    z-index: 5;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -102,25 +118,29 @@
       }
     }
   }
-}
 
+  .day-count {
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 1px;
+    padding-top: 20px;
+  }
+}
 /* ====================================================
 // main
 ==================================================== */
 .top-main {
   // padding-top: 50px;
   padding: 0 10px;
-  @include media ($sp) {
-
-  }
   /* ====================================================
   // photo-contents
   ==================================================== */
   .photo-contents {
-    background-color: #fff;
-    padding: 0 20px 20px;
+    // background-color: #fefefe;
+    // padding: 0 20px 20px;
     box-sizing: border-box;
     border-radius: 10px;
+
     &__title {
       text-align: center;
       font-size: 3rem;
@@ -198,29 +218,53 @@
           min-height: 250px;
           background-position: center;
           background-size: cover;
+          transition: transform 0.3s linear;
+          &:hover{
+            transform: scale(1.1);
+          }
         }
       }
     }
   }
 }
 
-.secret-link{
-  position: absolute;
-  bottom: 180px;
-  right: 180px;
-  background-color: $turquoise;
-  color: #fff;
-  padding: 16px 0;
-  width: 160px;
-  text-align: center;
-  box-sizing: border-box;
-  font-size: 1.4rem;
-  @include opacity(0);
-  transition: 0.3s;
-  &:hover{
-    @include opacity(1);
-  }
-  @include media ($sp) {
-    display: none;
+/*===========================================
+	sns設定
+=============================================*/
+.sns-timeline{
+  padding: 0 10px;
+  .section-wrap{
+    border-radius: 10px;
+    // background-color: $incblue;
+    width: 100%;
+    padding: 60px 0;
+    box-sizing: border-box;
+    @include flex();
+    align-items: center;
+    justify-content: center;
+    @include media($sp) {
+      @include fd(column);
+      padding-left: 20px;
+      padding-right: 20px;
+    };
+    .fb-page{
+      width: 400px;
+      @include media($sp) {
+        margin-bottom: 30px;
+        iframe{
+          width: 100%;
+        }
+      };
+    }
+    .twitter{
+      width: 400px;
+      // height: 400px;
+      // overflow: scroll;
+      margin-left: 60px;
+      @include media($sp) {
+        width: 100%;
+        margin: 0 auto;
+      };
+    }
   }
 }
