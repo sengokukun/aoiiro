@@ -19,7 +19,6 @@ html {
 }
 
 body {
-  background-color: $main-bg;
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -89,34 +88,7 @@ li {
   background-image: url("../../img/bg.png");
   position: relative;
 }
-/* ====================================================
-// contents-wrap
-==================================================== */
-// .bg-main{
-//   height: 100vh;
-//   width: 100%;
-//   margin-top: -70px;
-//   margin-bottom: -60px;
-//
-//   display: -webkit-flex;
-//   display: -moz-flex;
-//   display: -ms-flex;
-//   display: -o-flex;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
 
-.bg {
-  background-image: url("../../img/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  @include media($sp) {
-    background-image: none;
-    background-color: $main-bg;
-  }
-}
 /* ====================================================
 // container
 ==================================================== */
@@ -174,7 +146,7 @@ li {
     position: relative;
     z-index: 2;
     background-color: inherit;
-    border: 2px solid $turquoise;
+    border: 1px solid $turquoise;
     color: $turquoise;
     overflow: hidden;
     font-size: 1.6rem;
@@ -203,17 +175,18 @@ li {
   justify-content: space-between;
   height: 70px;
   width: 100%;
-  position: relative;
   // background-color: #fff;
-  z-index: 999;
   @include media ($sp) {
     height: 70px;
   }
 
   &__logo {
     width: 100px;
-    padding-left: 20px;
+    padding: 20px;
     align-self: center;
+    position: relative;
+    z-index: 100;
+
   }
   /* ====================================================
   // header-navi
@@ -228,12 +201,13 @@ li {
       outline: none;
       background-color: #fff;
       height: 100%;
-      padding-right: 20px;
-      // padding-top: 35px;
+      padding: 20px;
       box-sizing: border-box;
       cursor: pointer;
       appearance: none;
       background: transparent;
+      position: relative;
+      z-index: 100;
 
       .toggle-lines {
         display: inline-block;
@@ -310,7 +284,7 @@ li {
       width: 240px;
       height: 100%;
       background-color: #fff;
-      z-index: 2;
+      z-index: 99;
 
       &__item {
         font-size: 2rem;

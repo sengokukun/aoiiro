@@ -31,19 +31,6 @@ $(function(){
     layer.hide();
   });
 
-  //画像ランダム表示
-
-  //  if( windowW > 481 ){
-  //    var array = [
-  //      "../img/bg_form.svg"
-  //     //  "../img/bg02.png"
-  //    ];
-  //    var l = array.length;
-  //    var r = Math.floor(Math.random()*l);
-  //    var bgimgurl = array[r];
-  //    $(".hero").css('background-image',('url("'+bgimgurl+'")'));
-  //  }
-
   //harmony
   if( windowW > 481 ){
     $('.hero').harmony({

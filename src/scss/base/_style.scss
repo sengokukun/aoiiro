@@ -3,14 +3,14 @@
 ==================================================== */
 
 canvas {
-  cursor: crosshair;
+  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100;
 }
 
 .hero {
@@ -98,6 +98,9 @@ canvas {
       @include media ($sp) {
         font-size: 2.6rem;
       }
+      @include media ($iphone5) {
+        font-size: 2rem;
+      }
     }
 
     &__subtitle {
@@ -107,6 +110,9 @@ canvas {
       @include media ($sp) {
         font-size: 1.6rem;
       }
+      @include media ($iphone5) {
+        font-size: 1.2rem;
+      }
 
       span {
         color: $incblue;
@@ -114,6 +120,9 @@ canvas {
         font-weight: bold;
         @include media ($sp) {
           font-size: 2.6rem;
+        }
+        @include media ($iphone5) {
+          font-size: 2rem;
         }
       }
     }
@@ -124,6 +133,9 @@ canvas {
     font-size: 4rem;
     letter-spacing: 1px;
     padding-top: 20px;
+    @include media ($iphone5) {
+      font-size: 3rem;
+    }
   }
 }
 /* ====================================================
@@ -150,7 +162,7 @@ canvas {
       padding-bottom: 20px;
       font-weight: normal;
       @include media ($sp) {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
       }
 
       &::after,
@@ -165,7 +177,9 @@ canvas {
         margin: 0 30px;
         display: inline-block;
         @include media ($sp) {
-          width: 60px;
+          width: 40px;
+          margin-left: 15px;
+          margin-right: 15px;
         }
       }
     }
