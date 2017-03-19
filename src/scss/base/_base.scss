@@ -175,10 +175,14 @@ li {
   justify-content: space-between;
   height: 70px;
   width: 100%;
-  // background-color: #fff;
   @include media ($sp) {
-    height: 70px;
+    height: 60px;
+    align-items: center;
   }
+  @include media ($iphone5) {
+    height: 50px;
+  }
+  // background-color: #fff;
 
   &__logo {
     width: 100px;
@@ -186,7 +190,14 @@ li {
     align-self: center;
     position: relative;
     z-index: 100;
-
+    @include media ($sp) {
+      width: 80px;
+      padding: 0;
+      padding-left: 20px;
+    }
+    @include media ($iphone5) {
+      padding-left: 10px;
+    }
   }
   /* ====================================================
   // header-navi
@@ -208,6 +219,15 @@ li {
       background: transparent;
       position: relative;
       z-index: 100;
+      @include media ($sp) {
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-right: 20px;
+        padding-top: 10px;
+      }
+      @include media ($iphone5) {
+        padding-right: 16px;
+      }
 
       .toggle-lines {
         display: inline-block;
@@ -218,6 +238,10 @@ li {
         width: 30px;
         height: 24px;
         z-index: 999999;
+        @include media ($sp) {
+          width: 26px;
+          height: 18px;
+        }
 
         &__line {
           display: inline-block;
@@ -233,10 +257,16 @@ li {
 
           &:nth-of-type(1) {
             top: 0;
+            @include media ($sp) {
+              top: -6px;
+            }
           }
 
           &:nth-of-type(2) {
             top: 11px;
+            @include media ($sp) {
+              top: 5px;
+            }
           }
 
           &:nth-of-type(3) {
@@ -287,7 +317,7 @@ li {
       z-index: 99;
 
       &__item {
-        font-size: 2rem;
+        font-size: 1.8rem;
         border-bottom: 1px solid #eee;
         // padding: 24px;
         line-height: 80px;
@@ -330,6 +360,7 @@ li {
   height: 60px;
 
   &__copyright {
+    font-size: 1.2rem;
     line-height: 60px;
     text-align: center;
     color: $incblue;
