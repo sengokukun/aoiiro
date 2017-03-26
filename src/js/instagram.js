@@ -1,5 +1,5 @@
 $(function(){
-    var photoViewNum = 33;
+    var photoViewNum = 18;
     $(".photos").html('<p class="txt01">ロード中...</p>');
     $.ajax({
         url: "https://api.instagram.com/v1/users/self/media/recent/",

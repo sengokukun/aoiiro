@@ -251,7 +251,7 @@ canvas {
 =============================================*/
 .sns-timeline{
   padding: 0 10px;
-  .section-wrap{
+  .timelines{
     border-radius: 10px;
     // background-color: $incblue;
     width: 100%;
@@ -265,7 +265,7 @@ canvas {
       padding-left: 20px;
       padding-right: 20px;
     };
-    .fb-page{
+    &__fb{
       width: 400px;
       @include media($sp) {
         margin-bottom: 30px;
@@ -274,7 +274,7 @@ canvas {
         }
       };
     }
-    .twitter{
+    &__tw{
       width: 400px;
       // height: 400px;
       // overflow: scroll;
