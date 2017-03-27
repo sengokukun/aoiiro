@@ -206,6 +206,9 @@ li {
     @include flex();
     align-items: center;
     @include fd(column);
+    @include media ($sp) {
+      padding-top: 10px;
+    }
 
     .header-toggle {
       border: 0;
@@ -220,10 +223,10 @@ li {
       position: relative;
       z-index: 100;
       @include media ($sp) {
-        padding-left: 0;
-        padding-bottom: 0;
-        padding-right: 20px;
-        padding-top: 10px;
+        // padding-left: 0;
+        // padding-bottom: 0;
+        // padding-right: 20px;
+        // padding-top: 10px;
       }
       @include media ($iphone5) {
         padding-right: 16px;
