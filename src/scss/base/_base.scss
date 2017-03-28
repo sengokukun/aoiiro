@@ -177,7 +177,7 @@ li {
   width: 100%;
   @include media ($sp) {
     height: 60px;
-    align-items: center;
+    // align-items: center;
   }
   @include media ($iphone5) {
     height: 50px;
@@ -193,6 +193,7 @@ li {
     @include media ($sp) {
       width: 80px;
       padding: 0;
+      padding-top: 6px;
       padding-left: 20px;
     }
     @include media ($iphone5) {
@@ -207,7 +208,7 @@ li {
     align-items: center;
     @include fd(column);
     @include media ($sp) {
-      padding-top: 10px;
+      padding-top: 5px;
     }
 
     .header-toggle {
