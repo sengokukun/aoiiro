@@ -1,0 +1,24 @@
+.colors-wrap {
+  .colors {
+    @include flex();
+    flex-wrap: wrap;
+
+    .colors-item {
+      @include flex();
+      @include fd(column);
+      align-items: center;
+      justify-content: center;
+      width: calc(100% / 5);
+      color: #fff;
+      height: 150px;
+
+      &__title {}
+
+      &__code {}
+
+      &--aiiro {
+        background-color: #105779;
+      }
+    }
+  }
+}
