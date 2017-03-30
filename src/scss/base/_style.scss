@@ -1,7 +1,6 @@
 /* ====================================================
 // hero
 ==================================================== */
-
 canvas {
   cursor: pointer;
   position: absolute;
@@ -10,7 +9,7 @@ canvas {
   right: 0;
   left: 0;
   width: 100%;
-  height: 100;
+  height: 100%;
 }
 
 .hero {
@@ -46,7 +45,7 @@ canvas {
       opacity: 0;
       height: 80px;
       @include media ($sp) {
-        height: 50px;
+        height: 40px;
       }
 
       &--a {
@@ -134,7 +133,7 @@ canvas {
     letter-spacing: 1px;
     padding-top: 20px;
     @include media ($iphone5) {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
     }
   }
 }
@@ -201,7 +200,7 @@ canvas {
     }
 
     article {
-      width : calc(100% / 3);
+      width: calc(100% / 3);
       height: 300px;
       display: -webkit-flex;
       display: -moz-flex;
@@ -234,24 +233,29 @@ canvas {
           background-position: center;
           background-size: cover;
           transition: transform 0.3s linear;
-          &:hover{
-            transform: scale(1.1);
+          @include media ($pc) {
+            &:hover {
+              transform: scale(1.1);
+            }
           }
           @include media ($sp) {
             height: 250px;
+            &:hover{
+              opacity: 0.7;
+            }
           }
         }
       }
     }
   }
 }
-
 /*===========================================
 	sns設定
 =============================================*/
-.sns-timeline{
+.sns-timeline {
   padding: 0 10px;
-  .timelines{
+
+  .timelines {
     border-radius: 10px;
     // background-color: $incblue;
     width: 100%;
@@ -261,20 +265,23 @@ canvas {
     align-items: center;
     justify-content: center;
     @include media($sp) {
-      @include fd(column);
+       @include fd(column);
       padding-left: 20px;
       padding-right: 20px;
     };
-    &__fb{
+
+    &__fb {
       width: 400px;
       @include media($sp) {
         margin-bottom: 30px;
-        iframe{
+
+        iframe {
           width: 100%;
         }
       };
     }
-    &__tw{
+
+    &__tw {
       width: 400px;
       // height: 400px;
       // overflow: scroll;
