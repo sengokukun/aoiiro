@@ -270,9 +270,10 @@ canvas {
       padding-right: 20px;
     };
 
-    &__fb {
+    .fb-page {
       width: 400px;
       @include media($sp) {
+        width: 100%;
         margin-bottom: 30px;
 
         iframe {

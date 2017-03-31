@@ -24,3 +24,28 @@
     }
   }
 }
+
+.license-site{
+  width: 256px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #333;
+  &__title{
+    font-weight: normal;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+    color: #fff;
+  }
+  .license-lists{
+    .license-list{
+      font-size: 1.2rem;
+      line-height: 2em;
+      .license-link{
+        color: #fff;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
