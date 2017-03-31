@@ -190,6 +190,7 @@ li {
   }
   @include media ($iphone5) {
     height: 50px;
+    padding-bottom: 10px;
   }
   // background-color: #fff;
 
