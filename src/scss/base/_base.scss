@@ -328,6 +328,7 @@ li {
       height: 100%;
       background-color: #fff;
       z-index: 99;
+      overflow-y: scroll;
 
       &__item {
         font-size: 1.8rem;
