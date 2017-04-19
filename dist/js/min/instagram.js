@@ -4,7 +4,7 @@ $(function(){
     $.ajax({
         url: "https://api.instagram.com/v1/users/self/media/recent/",
         data: {
-          access_token: "4755284003.eabfeda.b96e0ea542324d5d8a9c5cc8c9e18122",
+          access_token: "4755284003.4c88ce8.866cbebc79fb47b0a0a34a403b7507a3",
           count: photoViewNum
         },
         cache: false,
